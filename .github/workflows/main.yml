@@ -10,5 +10,6 @@ jobs:
         uses: canhdh/github-action-example@v1
         with:
           who-to-greet: "Canh DH"
+          private-action-token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
