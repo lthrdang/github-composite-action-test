@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: foo
-        uses: canhdh/github-action-example@v1
+        uses: canhdh/github-action-example@v1.0.1
         with:
           who-to-greet: "Canh DH"
           token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
