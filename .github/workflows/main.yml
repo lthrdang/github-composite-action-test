@@ -14,7 +14,7 @@ jobs:
           path: .github/actions
       - uses: actions/checkout@v2
       - id: foo
-        uses: ./.github/actions/action.yal
+        uses: ./.github/actions/action.yaml
         with:
           who-to-greet: "Canh DH"
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
