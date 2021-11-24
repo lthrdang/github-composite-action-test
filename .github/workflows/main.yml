@@ -13,7 +13,7 @@ jobs:
           repository: canhdh/github-action-example
           ref: v1.0.1
           token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
-          path: action.yaml
+          path: .github/actions
       - run: ls
       - id: foo
         uses: ./.github/actions/action.yaml
