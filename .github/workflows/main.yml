@@ -15,7 +15,7 @@ jobs:
           token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
           path: .github/actions/externals
       - id: foo
-        uses: ./.github/actions/externals/action
+        uses: ./.github/actions/externals
         with:
           who-to-greet: "Canh DH"
       - run: ls /home/runner/work/github-composite-action-test/
