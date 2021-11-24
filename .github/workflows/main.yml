@@ -8,7 +8,8 @@ jobs:
       - name: Get private repo with action
         uses: actions/checkout@v2
         with:
-          repository: canhdh/github-action-example@v1.0.1
+          repository: canhdh/github-action-example
+          ref: v1.0.1
           token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
           path: .github/actions
       - uses: actions/checkout@v2
