@@ -15,7 +15,7 @@ jobs:
           token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
           path: .github/actions/externals
       - run: ls .github/actions/
-      - run: ls .github/actions/externals
+      - run: ls ./.github/actions/externals
       - id: foo
         uses: ./.github/actions/externals/action.yaml
         with:
