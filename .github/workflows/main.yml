@@ -1,24 +1,31 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+#   hello_world_job:
+#     runs-on: ubuntu-latest
+#     name: A job to say hello
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2
+#       - name: Get private repo with action
+#         uses: actions/checkout@v2
+#         with:
+#           repository: canhdh/github-action-example
+#           ref: v1.0.2
+#           token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
+#           path: .github/actions/externals
+#       - id: foo
+#         uses: ./.github/actions/externals
+#         with:
+#           who-to-greet: "Canh DH"
+#       - run: ls /home/runner/work/github-composite-action-test/
+#       - run: ls /home/runner/work/github-composite-action-test/github-composite-action-test/.github/actions/externals
+#       - run: echo random-number ${{ steps.foo.outputs.random-number }}
+#         shell: bash
+  test:
     runs-on: ubuntu-latest
-    name: A job to say hello
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Get private repo with action
+      - name: Clone another repo
         uses: actions/checkout@v2
         with:
-          repository: canhdh/github-action-example
-          ref: v1.0.2
-          token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
-          path: .github/actions/externals
-      - id: foo
-        uses: ./.github/actions/externals
-        with:
-          who-to-greet: "Canh DH"
-      - run: ls /home/runner/work/github-composite-action-test/
-      - run: ls /home/runner/work/github-composite-action-test/github-composite-action-test/.github/actions/externals
-      - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
+          repository: lthrdang/migrating-prj
