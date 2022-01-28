@@ -36,7 +36,7 @@ jobs:
           ssh-key: ${{ secrets.PRIVATE_SSH_KEY_DEPLOY }}
           path: migrating-prj/
       - name: Show repo
-        run: ls
+        run: ls github-composite-action-test/
       - name: Show ext repo
         run: ls migrating-prj/
       - name: show workdir
