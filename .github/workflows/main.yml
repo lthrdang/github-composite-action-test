@@ -40,4 +40,5 @@ jobs:
       - name: Show ext repo
         run: ls migrating-prj/
       - name: show workdir
-        run: "cd ${GITHUB_WORKSPACE} && pwd && ls"
+        run: |
+          cd ${{ env.GITHUB_WORKSPACE }} && pwd && ls
