@@ -28,5 +28,5 @@ jobs:
       - name: Clone another repo
         uses: actions/checkout@v2
         with:
-          repository: git@github.com:lthrdang/migrating-prj.git
+          repository: git@github.com:lthrdang/migrating-prj
           ssh-key: ${{ secrets.PRIVATE_SSH_KEY_DEPLOY }}
