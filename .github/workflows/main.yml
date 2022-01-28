@@ -39,6 +39,8 @@ jobs:
         run: ls github-composite-action-test/
       - name: Show ext repo
         run: ls migrating-prj/
+      - name: set env
+        run: echo "GH_WORKSPACE=${GITHUB_WORKSPACE}" >> $GITHUB_ENV
       - name: show workdir
         run: |
-          cd ${{ env.GITHUB_WORKSPACE }} && pwd && ls
+          cd ${{ env.GH_WORKSPACE }} && pwd && ls
