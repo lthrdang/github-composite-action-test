@@ -25,6 +25,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Create folder to store code
+        run: mkdir /data/bitbucket
       - name: Checkout repo
         uses: actions/checkout@v2
       - name: Clone another repo
@@ -37,3 +39,5 @@ jobs:
         run: ls
       - name: Show ext repo
         run: ls migrating-prj/
+      - name: show workdir
+        run: cd ${GITHUB_WORKSPACE} && pwd && ls
