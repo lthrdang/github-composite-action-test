@@ -30,5 +30,6 @@ jobs:
         with:
           repository: lthrdang/migrating-prj
           ssh-key: ${{ secrets.PRIVATE_SSH_KEY_DEPLOY }}
+          path: migrating-prj/
       - name: Show repo
         run: ls migrating-prj/
